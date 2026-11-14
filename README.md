@@ -6,7 +6,7 @@ An interactive **Data Structures & Algorithms visualizer** built with Streamlit 
 
 - 🎬 Step-by-step slider with color-coded bars for every algorithm
 - 💬 Plain-language explanation for each step
-- 📊 Live counters for comparisons and swaps/shifts
+- 📊 Live counters for comparisons and swaps/shifts/writes
 - 🎲 Quick example inputs: random, reversed (worst case), already sorted (best case), duplicates
 - 📖 Learn panel per algorithm: how it works, pseudocode, time/space complexity, tips
 - ✅ Automated tests for every algorithm (pytest)
@@ -18,6 +18,7 @@ An interactive **Data Structures & Algorithms visualizer** built with Streamlit 
 | 📥 | Insertion Sort | O(n) | O(n²) | O(n²) | O(1) | Yes |
 | 🎯 | Selection Sort | O(n²) | O(n²) | O(n²) | O(1) | No |
 | 🫧 | Bubble Sort | O(n) | O(n²) | O(n²) | O(1) | Yes |
+| 🔀 | Merge Sort | O(n log n) | O(n log n) | O(n log n) | O(n) | Yes |
 
 ## 📁 Project Structure
 
@@ -26,7 +27,8 @@ AlgoVision-AI/
 ├── algorithms/          # 🧮 Algorithm logic, returns step-by-step records
 │   ├── insertion_sort.py
 │   ├── selection_sort.py
-│   └── bubble_sort.py
+│   ├── bubble_sort.py
+│   └── merge_sort.py
 ├── components/          # 🎨 Shared UI
 │   ├── ui.py            #    Theme, hero banner, legend, learn panel
 │   └── viz.py           #    Reusable sorting page (chart, slider, metrics)
@@ -34,6 +36,7 @@ AlgoVision-AI/
 │   ├── 1_Insertion_Sort.py
 │   ├── 2_Selection_Sort.py
 │   ├── 3_Bubble_Sort.py
+│   ├── 4_Merge_Sort.py
 │   └── tests/           # ✅ pytest tests, one file per algorithm
 ├── add.py               # ▶️ App entry point (home page)
 ├── conftest.py          # pytest configuration
@@ -86,7 +89,7 @@ Each algorithm in `algorithms/` returns a dictionary:
 {
     "steps": [...],         # one record per step (action, array, highlights, message)
     "comparisons": 10,
-    "swaps": 4,             # or "shifts" for insertion sort
+    "swaps": 4,             # "shifts" for insertion sort, "writes" for merge sort
     "sorted_array": [...],
 }
 ```
@@ -111,7 +114,8 @@ The page only reads this data and draws it, so the algorithm logic stays separat
 - [x] 📥 Insertion Sort
 - [x] 🎯 Selection Sort
 - [x] 🫧 Bubble Sort
-- [ ] 🔀 Merge Sort and Quick Sort
+- [x] 🔀 Merge Sort
+- [ ] ⚡ Quick Sort
 - [ ] 🔍 Searching (linear and binary)
 - [ ] 🧱 Linked list, stack, queue
 - [ ] 🌳 Trees and graphs
