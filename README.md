@@ -20,6 +20,7 @@ An interactive **Data Structures & Algorithms visualizer** built with Streamlit 
 | 🫧 | Bubble Sort | O(n) | O(n²) | O(n²) | O(1) | Yes |
 | 🔀 | Merge Sort | O(n log n) | O(n log n) | O(n log n) | O(n) | Yes |
 | ⚡ | Quick Sort | O(n log n) | O(n log n) | O(n²) | O(log n) | No |
+| 🌳 | Heap Sort | O(n log n) | O(n log n) | O(n log n) | O(1) | No |
 
 ## 📁 Project Structure
 
@@ -30,7 +31,8 @@ AlgoVision-AI/
 │   ├── selection_sort.py
 │   ├── bubble_sort.py
 │   ├── merge_sort.py
-│   └── quick_sort.py
+│   ├── quick_sort.py
+│   └── heap_sort.py
 ├── components/          # 🎨 Shared UI
 │   ├── ui.py            #    Theme, hero banner, legend, learn panel
 │   └── viz.py           #    Reusable sorting page (chart, slider, metrics)
@@ -40,6 +42,7 @@ AlgoVision-AI/
 │   ├── 3_Bubble_Sort.py
 │   ├── 4_Merge_Sort.py
 │   ├── 5_Quick_Sort.py
+│   ├── 6_Heap_Sort.py
 │   └── tests/           # ✅ pytest tests, one file per algorithm
 ├── add.py               # ▶️ App entry point (home page)
 ├── conftest.py          # pytest configuration
@@ -119,6 +122,7 @@ The page only reads this data and draws it, so the algorithm logic stays separat
 - [x] 🫧 Bubble Sort
 - [x] 🔀 Merge Sort
 - [x] ⚡ Quick Sort
+- [x] 🌳 Heap Sort
 - [ ] 🔍 Searching (linear and binary)
 - [ ] 🧱 Linked list, stack, queue
 - [ ] 🌳 Trees and graphs
