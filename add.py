@@ -44,3 +44,4 @@ st.markdown("""
 - AI Algorithm Explanations
 """)
 
+st.page_link("pages/6_Heap_Sort.py", label="Heap Sort", icon="🌳")
